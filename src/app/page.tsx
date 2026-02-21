@@ -8,6 +8,7 @@ import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/Education";
 import { Header } from "./components/Header";
 import { Projects } from "./components/Projects";
+import { Publications } from "./components/Publications";
 import { Skills } from "./components/Skills";
 import { Summary } from "./components/Summary";
 import { WorkExperience } from "./components/WorkExperience";
@@ -72,7 +73,7 @@ export default function ResumePage() {
         }}
       />
       <main
-        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:px-11 print:pb-11 print:pt-0 md:p-16"
         id="main-content"
       >
         <div className="sr-only">
@@ -96,6 +97,12 @@ export default function ResumePage() {
               </Suspense>
             </SectionErrorBoundary>
 
+            <SectionErrorBoundary sectionName="Skills">
+              <Suspense fallback={<SectionSkeleton lines={2} />}>
+                <Skills skills={RESUME_DATA.skills} />
+              </Suspense>
+            </SectionErrorBoundary>
+
             <SectionErrorBoundary sectionName="Work Experience">
               <Suspense fallback={<SectionSkeleton lines={6} />}>
                 <WorkExperience work={RESUME_DATA.work} />
@@ -108,17 +115,21 @@ export default function ResumePage() {
               </Suspense>
             </SectionErrorBoundary>
 
-            <SectionErrorBoundary sectionName="Skills">
-              <Suspense fallback={<SectionSkeleton lines={2} />}>
-                <Skills skills={RESUME_DATA.skills} />
-              </Suspense>
-            </SectionErrorBoundary>
+            {RESUME_DATA.publications.length > 0 && (
+              <SectionErrorBoundary sectionName="Publications">
+                <Suspense fallback={<SectionSkeleton lines={4} />}>
+                  <Publications publications={RESUME_DATA.publications} />
+                </Suspense>
+              </SectionErrorBoundary>
+            )}
 
-            <SectionErrorBoundary sectionName="Projects">
-              <Suspense fallback={<SectionSkeleton lines={5} />}>
-                <Projects projects={RESUME_DATA.projects} />
-              </Suspense>
-            </SectionErrorBoundary>
+            {RESUME_DATA.projects.length > 0 && (
+              <SectionErrorBoundary sectionName="Projects">
+                <Suspense fallback={<SectionSkeleton lines={5} />}>
+                  <Projects projects={RESUME_DATA.projects} />
+                </Suspense>
+              </SectionErrorBoundary>
+            )}
           </div>
         </section>
 

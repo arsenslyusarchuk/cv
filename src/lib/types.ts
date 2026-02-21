@@ -1,17 +1,19 @@
 import type { StaticImageData } from "next/image";
 
-export type ResumeIcon = React.ComponentType<React.SVGProps<SVGSVGElement>> | StaticImageData;
+export type ResumeIcon =
+  | React.ComponentType<React.SVGProps<SVGSVGElement>>
+  | StaticImageData;
 
 export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
 export interface ResumeData {
   name: string;
   initials: string;
-  location: string;
-  locationLink: string;
+  location?: string;
+  locationLink?: string;
   about: string;
   summary: string | React.ReactNode;
-  avatarUrl: string;
+  avatarUrl: string | StaticImageData;
   personalWebsiteUrl: string;
   contact: {
     email: string;
@@ -27,6 +29,10 @@ export interface ResumeData {
     degree: string;
     start: string;
     end: string;
+  }>;
+  publications: Array<{
+    citation: string;
+    doi?: string;
   }>;
   work: Array<{
     company: string;
@@ -124,11 +130,12 @@ export function resumeDataToGraphQL(data: ResumeData): GraphQLMe {
   return {
     name: data.name,
     initials: data.initials,
-    location: data.location,
-    locationLink: data.locationLink,
+    location: data.location ?? "",
+    locationLink: data.locationLink ?? "",
     about: data.about,
     summary: reactToString(data.summary),
-    avatarUrl: data.avatarUrl,
+    avatarUrl:
+      typeof data.avatarUrl === "string" ? data.avatarUrl : data.avatarUrl.src,
     personalWebsiteUrl: data.personalWebsiteUrl,
     contact: {
       email: data.contact.email,

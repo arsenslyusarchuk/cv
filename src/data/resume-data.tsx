@@ -1,237 +1,270 @@
 import type { ResumeData } from "@/lib/types";
+import { Avatar } from "@/images/logos";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about: "Full Stack Engineer dedicated to building high-quality products.",
+  name: "Arsen Slyusarchuk",
+  initials: "AS",
+  location: "Lviv, Ukraine, EET",
+  locationLink: "https://www.google.com/maps/place/Lviv",
+  about: "PhD, Javascript Competency Manager at ELEKS",
   summary: (
     <>
-      Full Stack Engineer specializing in high-performance React applications,
-      scalable Node.js services, and real-time collaboration systems.
-      Experienced in technical architecture design and remote team leadership.
+      <p>
+        With a foundation in Applied Mathematics and over a decade of experience
+        in software engineering, I've built my career around leading, growing,
+        and inspiring technical teams to deliver high-impact solutions.
+        Currently, I serve as a Competency Manager, overseeing the continuous
+        growth of a JavaScript engineering stream of over 200 specialists.
+      </p>
+      <p>
+        My focus lies at the intersection of people management, technology
+        strategy, and innovation. I'm deeply engaged in mentorship, conflict
+        resolution, and staffing processes, ensuring that every engineer has a
+        clear development path and that each team is built for both excellence
+        and sustainability.
+      </p>
+      <p>
+        Beyond people leadership, I actively contribute to R&D initiatives,
+        pre-sales, and AI-driven solutions, bridging the gap between
+        cutting-edge research and real-world software delivery.
+      </p>
+      <p>
+        As a PhD in Engineering Sciences, my academic work centered on
+        computational modeling and molecular simulations, resulting in
+        publications in journals such as Macromolecules, Soft Matter, and Liquid
+        Crystals.
+      </p>
+      <p>
+        I'm passionate about continuous learning, team culture, and creating
+        environments where people thrive, innovate, and grow together.
+      </p>
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: Avatar,
+  personalWebsiteUrl: "",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "arsenslyusarchuk@gmail.com",
+    tel: "+380937677173",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/arsenslyusarchuk",
         icon: "github",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/arsenslyusarchuk/",
         icon: "linkedin",
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://x.com/ASlyusarchuk",
         icon: "x",
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Lviv Polytechnic National University",
+      degree:
+        "PhD (Candidate of Technical Sciences). Defended a Thesis on specialty 'Mathematical Simulation and Methods of Calculation' ",
+      start: "2013",
+      end: "2021",
+    },
+    {
+      school: "Lviv Polytechnic National University",
+      degree: "Master's Degree in Applied Mathematics",
+      start: "2008",
+      end: "2013",
+    },
+  ],
+  publications: [
+    {
+      citation:
+        "Ilnytskyi J., Slyusarchuk A., Saphiannikova M. Photocontrollable self-assembly of azobenzene-decorated nanoparticles in bulk: Computer simulation study // Macromolecules. 2016. Vol. 49(23). P. 9272-9282.",
+      doi: "10.1021/acs.macromol.6b01871",
+    },
+    {
+      citation:
+        "Ilnytskyi J., Slyusarchuk A., Sokołowski S. Gelation of patchy ligand shell nanoparticles decorated by liquid-crystalline ligands: computer simulation study // Soft Matter. 2018. Is. 19. P. 3799-3810.",
+      doi: "10.1039/C8SM00356D",
+    },
+    {
+      citation:
+        "Ilnytskyi J., Slyusarchuk A., Saphiannikova M. Photo-controllable percolation of decorated nanoparticles in a nanopore: molecular dynamics simulation study // Mathematical Modelling and Computing. 2016. Vol. 3, N 1. P. 33-42.",
+      doi: "10.23939/mmc2016.01.033",
+    },
+    {
+      citation:
+        "Slyusarchuk A., Yaremchuk D., Ilnytskyi J. Adsorption of decorated nanoparticles on a liquid crystalline polymer brush: molecular dynamics study // Mathematical Modelling and Computing. 2020. Vol. 7, N 2. P. 207-218.",
+      doi: "10.23939/mmc2020.02.207",
+    },
+    {
+      citation:
+        "Slyusarchuk, A., Yaremchuk, D., Lintuvuori, J., Wilson, M. R., Grenzer, M., Sokołowski, S., & Ilnytskyi, J. Aided- and self-assembly of liquid crystalline nanoparticles in bulk and in solution: computer simulation studies // Liquid Crystals. 2023. Vol. 50, Issue 1, pp. 74–97.",
+      doi: "10.1080/02678292.2023.2169872",
     },
   ],
   work: [
     {
-      company: "Motion",
-      link: "https://motionapp.com/",
-      badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Software Engineer",
-      start: "2025",
-      end: null,
+      company: "Eleks",
+      link: "https://eleks.com/",
+      badges: [
+        "Technology Strategy",
+        "Mentorship",
+        "Workshops",
+        "Career Path",
+        "Competency Assessment",
+        "Technology Standards",
+        "Interviewing",
+        "R&D",
+        "Pre-sales",
+        "AI",
+        "JavaScript",
+      ],
+      title: "Javascript Competency Manager",
+      start: "2019",
+      end: "present",
       description: (
         <>
-          Working on internal AI agents platform allowing marketing specialists
-          to create AI workflows.
-        </>
-      ),
-    },
-    {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      start: "2024",
-      end: "2025",
-      description: (
-        <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
+          Leading a JavaScript competence stream of around 200 engineers across
+          strategy, growth, and engineering excellence.
           <ul className="list-inside list-disc">
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
+              Define and execute the competence development strategy for the
+              JavaScript stream
             </li>
             <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
+              Design and scale trainings, workshops, and knowledge-sharing
+              programs
+            </li>
+            <li>Develop and govern structured career path frameworks</li>
+            <li>
+              Conduct competency assessments and develop expert interview groups
             </li>
             <li>
-              Implementing system-wide monitoring and security improvements
+              Establish and promote technology standards and engineering best
+              practices
             </li>
+            <li>
+              Drive technical interviewing and staffing decisions across teams
+            </li>
+            <li>
+              Provide mentorship, coaching, and conflict resolution support
+            </li>
+            <li>Lead and contribute to R&D and AI-driven initiatives</li>
+            <li>Support pre-sales activities and technical solution design</li>
+            <li>Bridge research, AI innovation, and real-world delivery</li>
           </ul>
         </>
       ),
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
+      company: "Lviv Polytechnic National University",
+      link: "https://lpnu.ua/en",
+      badges: ["Teaching", "Research", "Information Systems"],
+      title:
+        "Assistant of the Department of Information Systems and Technologies",
+      start: "2020",
+      end: "present",
+      description:
+        "Educational and Research Institute of Spatial Planning and Advanced Technologies. Teaching and research in information systems and technologies.",
+    },
+    {
+      company: "Perfectial",
+      link: "https://uk.wikipedia.org/wiki/Perfectial",
       badges: [
-        "Remote",
         "React",
-        "TypeScript",
+        "React Native",
+        "Angular",
+        "Polymer",
+        "Ionic",
+        "Backbone.js",
         "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
+        "Ruby on Rails",
+        "Python",
+        "AWS",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Solr",
+        "Redux",
+        "Flux",
+        "Webpack",
+        "Gulp",
       ],
       title: "Senior Full Stack Developer",
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
       start: "2012",
-      end: "2015",
+      end: "2019",
       description: (
         <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
+          Progressed from Junior to Senior Software Engineer.
+          <p>
+            Delivered web and mobile solutions across 12 international projects
+            spanning logistics, SaaS enterprise systems, marketplaces,
+            advertising platforms, fintech, e-commerce, and real-time
+            applications for US, UK, and EU clients.
+          </p>
           <ul className="list-inside list-disc">
             <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
+              Developed and delivered production-ready features based on
+              technical specifications
             </li>
-            <li>Built and mentored high-performing mobile development team</li>
+            <li>
+              Built scalable front-end and back-end solutions across web and
+              mobile platforms
+            </li>
+            <li>
+              Implemented real-time functionality and interactive user
+              experiences
+            </li>
+            <li>
+              Contributed to multi-tenant SaaS and marketplace architectures
+            </li>
+            <li>Integrated APIs, payment systems, and third-party services</li>
+            <li>
+              Performed code reviews and maintained code quality standards
+            </li>
+            <li>Fixed defects and improved system performance and stability</li>
+            <li>
+              Collaborated directly with customers and cross-functional teams
+            </li>
+            <li>Participated in Agile-based development processes</li>
+            <li>
+              Contributed to architectural decisions and technology selection
+            </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      start: "2010",
-      end: "2012",
+      company: "LITS (Lviv IT School)",
+      link: "http://lits.ua/",
+      badges: ["Ruby on Rails", "Mentoring", "Teaching"],
+      title: "Student Mentor — Ruby on Rails Course",
+      start: "2015",
+      end: "2016",
       description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
+        "Mentored students through a Ruby on Rails development course, providing guidance on programming fundamentals, best practices, and project work.",
     },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
+    "Technology Strategy",
+    "Competency Management",
+    "Mentorship & Coaching",
+    "Technical Interviewing",
+    "Team Leadership",
+    "Pre-sales",
+    "Teaching & Research",
+    "R&D / AI",
+    "JavaScript/TypeScript",
+    "React/React Native",
+    "Angular",
     "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "Ruby on Rails",
+    "Python",
+    "PostgreSQL/MySQL/MongoDB",
+    "AWS",
   ],
-  projects: [
-    {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
-      ],
-      description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
-    },
-  ],
+  projects: [],
 } as const;

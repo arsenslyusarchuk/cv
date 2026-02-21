@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
 interface OptimizedAvatarProps {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   fallback: string;
   className?: string;
@@ -18,6 +18,8 @@ export function Avatar({
   className,
 }: OptimizedAvatarProps) {
   const [error, setError] = React.useState(false);
+
+  const isExternal = typeof src === "string" && src.startsWith("http");
 
   return (
     <div
@@ -35,7 +37,7 @@ export function Avatar({
           className="aspect-square h-full w-full object-cover"
           onError={() => setError(true)}
           priority={true}
-          unoptimized={src.startsWith("http")} // For external URLs
+          unoptimized={isExternal} // For external URLs
         />
       ) : (
         <div className="flex h-full w-full items-center justify-center text-lg font-semibold">
