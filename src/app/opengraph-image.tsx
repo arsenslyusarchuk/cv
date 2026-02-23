@@ -35,7 +35,7 @@ export default async function Image() {
       >
         {/* biome-ignore lint/performance/noImgElement: ImageResponse context requires img element */}
         <img
-          src={RESUME_DATA.avatarUrl}
+          src={typeof RESUME_DATA.avatarUrl === "string" ? RESUME_DATA.avatarUrl : RESUME_DATA.avatarUrl.src}
           alt={RESUME_DATA.name}
           style={{
             width: "150px",
