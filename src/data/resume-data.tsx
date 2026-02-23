@@ -10,33 +10,20 @@ export const RESUME_DATA: ResumeData = {
   summary: (
     <>
       <p>
-        With a foundation in Applied Mathematics and over a decade of experience
-        in software engineering, I've built my career around leading, growing,
-        and inspiring technical teams to deliver high-impact solutions.
-        Currently, I serve as a Competency Manager, overseeing the continuous
-        growth of a JavaScript engineering stream of over 200 specialists.
+        With a foundation in Applied Mathematics and over 13 years of experience
+        in software engineering, I currently serve as JavaScript Competency
+        Manager, overseeing the continuous growth of a 200+ engineer stream —
+        driving strategy, career frameworks, and engineering excellence.
       </p>
       <p>
-        My focus lies at the intersection of people management, technology
-        strategy, and innovation. I'm deeply engaged in mentorship, conflict
-        resolution, and staffing processes, ensuring that every engineer has a
-        clear development path and that each team is built for both excellence
-        and sustainability.
+        I'm deeply engaged in mentorship, conflict resolution, and staffing,
+        ensuring clear development paths and team sustainability.
       </p>
       <p>
-        Beyond people leadership, I actively contribute to R&D initiatives,
-        pre-sales, and AI-driven solutions, bridging the gap between
-        cutting-edge research and real-world software delivery.
-      </p>
-      <p>
-        As a PhD in Engineering Sciences, my academic work centered on
-        computational modeling and molecular simulations, resulting in
-        publications in journals such as Macromolecules, Soft Matter, and Liquid
-        Crystals.
-      </p>
-      <p>
-        I'm passionate about continuous learning, team culture, and creating
-        environments where people thrive, innovate, and grow together.
+        Constantly contributing to the pre-sales, R&D and AI initiatives. Created an internal course 
+        on working with LLMs — from using AI tools to building custom agents for the entire
+        Engineering department. PhD in Engineering Sciences with publications
+        in Macromolecules, Soft Matter, and Liquid Crystals.
       </p>
     </>
   ),
@@ -63,6 +50,16 @@ export const RESUME_DATA: ResumeData = {
       },
     ],
   },
+  languages: [
+    {
+      language: "English",
+      level: "C1",
+    },
+    {
+      language: "Ukrainian",
+      level: "Native",
+    },
+  ],
   education: [
     {
       school: "Lviv Polytechnic National University",
@@ -76,6 +73,15 @@ export const RESUME_DATA: ResumeData = {
       degree: "Master's Degree in Applied Mathematics",
       start: "2008",
       end: "2013",
+    },
+  ],
+  certifications: [
+    {
+      title:
+        "Certificate of English Language Proficiency according to the Common European Framework of Reference for Languages (CEFR), Oxford Online Placement Test, CEFR C1",
+      issuer: "Lviv Polytechnic National University",
+      date: "2023-03-31",
+      certificateNumber: "OD 02071010/0249-23",
     },
   ],
   publications: [
@@ -257,6 +263,7 @@ export const RESUME_DATA: ResumeData = {
     "Pre-sales",
     "Teaching & Research",
     "R&D / AI",
+    "Langchain / Langgraph",
     "JavaScript/TypeScript",
     "React/React Native",
     "Angular",
@@ -264,6 +271,7 @@ export const RESUME_DATA: ResumeData = {
     "Ruby on Rails",
     "Python",
     "PostgreSQL/MySQL/MongoDB",
+    "Pinecone/ChromaDB",
     "AWS",
   ],
   projects: [],

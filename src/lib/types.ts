@@ -24,11 +24,21 @@ export interface ResumeData {
       icon: IconType;
     }>;
   };
+  languages: Array<{
+    language: string;
+    level: string;
+  }>;
   education: Array<{
     school: string;
     degree: string;
     start: string;
     end: string;
+  }>;
+  certifications: Array<{
+    title: string;
+    issuer: string;
+    date: string;
+    certificateNumber?: string;
   }>;
   publications: Array<{
     citation: string;

@@ -183,6 +183,16 @@ export function Header() {
           {RESUME_DATA.about}
         </p>
 
+        {RESUME_DATA.languages.length > 0 && (
+          <ul className="max-w-md list-none font-mono text-xs text-foreground">
+            {RESUME_DATA.languages.map((l) => (
+              <li key={l.language}>
+                {l.language}: {l.level}
+              </li>
+            ))}
+          </ul>
+        )}
+
         <LocationLink
           location={RESUME_DATA.location}
           locationLink={RESUME_DATA.locationLink}
